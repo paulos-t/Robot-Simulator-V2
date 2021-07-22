@@ -42,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function() {
   movesContainer.addEventListener("click", moveDeleter)
 
   function moveDeleter(event) {
-    event.target.remove()
+    if (event.target.matches("li")) {
+      event.target.remove()
+    }
   }
 });
